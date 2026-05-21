@@ -1,0 +1,2 @@
+;; Generated package description from fsm.el  -*- no-byte-compile: t -*-
+(define-package "fsm" "0.2.1" "state machine library" '((emacs "24.1") (cl-lib "0.5")) :commit "3acbc4df9b13d234ca1e297d85be27c54e81799e" :url "https://elpa.gnu.org/packages/fsm.html" :authors '(("Magnus Henoch" . "magnus.henoch@gmail.com")) :maintainer '("Thomas Fitzsimmons" . "fitzsim@fitzsim.org") :keywords '("extensions"))
