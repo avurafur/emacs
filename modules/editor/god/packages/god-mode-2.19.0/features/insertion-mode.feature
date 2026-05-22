@@ -1,0 +1,21 @@
+Feature: Insertion mode
+  Background:
+    Given I am in buffer "god-mode-test"
+    And the buffer is empty
+    And I am in insertion mode
+
+  Scenario: C-u u inserts u 4 times
+    When I send the key sequence "C-u u"
+    Then the buffer's contents should be "uuuu"
+
+  Scenario: C-u C-u u inserts u 16 times
+    When I send the key sequence "C-u C-u u"
+    Then the buffer's contents should be "uuuuuuuuuuuuuuuu"
+
+  Scenario: C-x 8 P inserts ¶
+    When I send the key sequence "C-x 8 P"
+    Then the buffer's contents should be "¶"
+
+  Scenario: C-x 8 o inserts °
+    When I send the key sequence "C-x 8 o"
+    Then the buffer's contents should be "°"
