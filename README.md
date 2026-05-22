@@ -1,7 +1,5 @@
-<div align="center">
 # Emm Emacs
 
-# Info
 Module based configuration inspired by Doom Emacs.
 
 ## Prerequisites

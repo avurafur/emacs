@@ -14,8 +14,9 @@
 (module! "editor" "expand-region")
 (module! "editor" "marginalia")
 (module! "editor" "rainbow-delimiters")
-(module! "modelines" "no-modeline")
+(module! "modelines" "prot-modeline")
 
 (module! "tools" "lsp")
+(module! "tools" "compile")
 (module! "completion" "vertico")
 (module! "completion" "corfu")
