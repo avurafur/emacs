@@ -1,17 +1,20 @@
 (load (expand-file-name "lisp/module-loader.el" user-emacs-directory))
-(load-theme 'nord t)
+
+(load-theme 'modus-vivendi t)
+(set-face-background 'line-number "#000000")
+(set-face-background 'line-number-current-line "#000000")
+(set-face-background 'fringe "#000000")
 
 (module! "lang" "web")
 (module! "lang" "odin")
 (module! "lang" "rust")
 (module! "lang" "zig")
-(module! "lang" "go")
-(module! "lang" "lua")
 
 (module! "editor" "multiple-cursors")
 (module! "editor" "expand-region")
 (module! "editor" "marginalia")
 (module! "editor" "rainbow-delimiters")
+(module! "modelines" "no-modeline")
 
 (module! "tools" "lsp")
 (module! "completion" "vertico")

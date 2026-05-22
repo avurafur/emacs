@@ -7,14 +7,7 @@
 (with-eval-after-load
     (message (concat "Emacs took " (emacs-init-time) " to initialize")))
 
-(add-hook 'after-init-hook
-          (lambda ()
-            (mapc (lambda(p)(add-to-list 'load-path (file-name-directory p)))
-                  (directory-files-recursively "~/.emacs.d/deps" ""))
-            (load
-             (expand-file-name
-              "config.el"
-              user-emacs-directory))))
+(add-hook 'after-init-hook (lambda() (load (expand-file-name "config.el" user-emacs-directory))))
 
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
@@ -30,6 +23,7 @@
 (remove-hook 'text-mode-hook 'turn-on-auto-fill)
 (electric-pair-mode t)
 (electric-indent-mode t)
+(scroll-bar-mode -1)
 
 ;; Refresh
 (global-auto-revert-mode 1)
